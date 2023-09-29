@@ -1,0 +1,1 @@
+Error:    Part-checkin    name 'string' is not defined

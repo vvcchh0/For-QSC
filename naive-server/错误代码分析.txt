@@ -1,0 +1,3 @@
+1.		不能先全局 database=sqlite3.connect(...)   cursor=database.cursor()
+	因为会出现报错:  SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14228 and this is thread 	id 6120.
+	解决方案: 每一个视图函数下分别独立进行数据库操作.

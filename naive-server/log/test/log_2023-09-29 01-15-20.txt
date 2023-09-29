@@ -1,0 +1,1 @@
+Error:    Part-checkin    'sqlite3.Cursor' object is not subscriptable
