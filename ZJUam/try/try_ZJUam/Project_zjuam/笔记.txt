@@ -1,0 +1,8 @@
+GO
+
+string:
+a = "Hello"
+没有负索引
+切片无步长
+a[0], [1], [2]
+a[1]取出为byte结构, string(a[i])将byte转化为字符。

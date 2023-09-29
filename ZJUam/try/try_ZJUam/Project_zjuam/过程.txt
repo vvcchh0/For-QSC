@@ -1,0 +1,34 @@
+2023.09.25 |  安装 Go  |  实现 Hello World
+2023.09.26  |   研究 zjuam.zju.edu.cn/cas/login  |  分析html, js (0基础瞎分析)  
+           Security.js SHA加密相关    Line627 getKeyPair获取exponent, modulus, 开发者工具分析: zjuam.zju.edu.cn/cas/v2/getPubKey
+                                    Line 640 加密函数主体
+                                                              Line 200 biFromHex
+                                    Line 190 hexToDigit
+	     login.js       Line 121 checkForm() 关键函数    密码先倒序, 后处理
+2023.09.27  |    ~18:00    |  Get 获取 exponent, modulus
+------------翻译 Security.js
+2023.09.27  |    ~23：00      |  突然发现有跑 JavaScript 的 GO 引擎
+ 
+
+
+参考:
+登录流程分析  https://blog.csdn.net/qq_42598133/article/details/125658235
+GO 使用Cookie 做用户登录管理 https://blog.csdn.net/paterl/article/details/130400139
+
+GO 使用Cookie 实现登录(gin + gorm) https://blog.csdn.net/weixin_51299478/article/details/122848795?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-122848795-blog-130400139.235%5Ev38%5Epc_relevant_sort_base2&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-1-122848795-blog-130400139.235%5Ev38%5Epc_relevant_sort_base2&utm_relevant_index=2
+
+GO 设置、读取和删除 Cookie http://www.guoxiaolong.cn/blog/?id=9812
+GO 获取网页内容 https://bbs.huaweicloud.com/blogs/403624
+Go 为什么Response.Body需要被关闭&&内存泄漏数量 https://blog.csdn.net/qq_43778308/article/details/115448697
+GO 遍历字符串  https://www.php.cn/faq/500058.html
+GO 创建字符串    https://juejin.cn/post/6989118832379953159    https://juejin.cn/post/6844903796917682189?from=search-suggest
+GO 语言运算符 https://www.runoob.com/go/go-operators.html
+GO Type  http://kangkona.github.io/oo-in-golang/
+GO 中的类和对象    https://www.geeksforgeeks.org/class-and-object-in-golang/
+GO container/list List http://c.biancheng.net/view/35.html
+GO containter/list List 反向遍历 https://haicoder.net/golang/golang-list-walk.html
+GO 中调用 JS 代码: https://blog.csdn.net/qq_42527676/article/details/86481835
+GO 中调用 JS 代码   https://juejin.cn/post/6844904002975432717
+GO 中调用  JS  代码    https://blog.51cto.com/u_16099241/6467254
+JS substr  https://www.runoob.com/jsref/jsref-substr.html
+JS ZERO_ARRAY

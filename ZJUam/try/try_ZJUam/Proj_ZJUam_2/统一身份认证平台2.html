@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- saved from url=(0109)https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                            
+                            <title key="createFolder.title">
+                                统一身份认证平台
+                            </title>
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                            <link rel="stylesheet" href="./统一身份认证平台2_files/bootstrap.min.css">
+                            <link rel="stylesheet" href="./统一身份认证平台2_files/style.css">
+                            <link rel="stylesheet" href="./统一身份认证平台2_files/font-awesome.css">
+                            <script type="text/javascript" async="" defer="" src="./统一身份认证平台2_files/piwik.js.下载"></script><script src="./统一身份认证平台2_files/hm.js.下载"></script><script type="text/javascript" src="./统一身份认证平台2_files/qrcode.js.下载">
+                            </script>
+                            <script type="text/javascript" src="./统一身份认证平台2_files/jquery-1.11.1-min.js.下载"></script>
+                            <script type="text/javascript" src="./统一身份认证平台2_files/jquery.i18n.properties-1.0.9.js.下载"></script>
+                            <script type="text/javascript" src="./统一身份认证平台2_files/i18n.js.下载"></script>
+                            <script type="text/javascript" src="./统一身份认证平台2_files/security.js.下载"></script>
+                            <script type="text/javascript" src="./统一身份认证平台2_files/pwdYz.js.下载"></script>
+                            <script type="text/javascript" src="./统一身份认证平台2_files/login.js.下载"></script>
+							
+							
+                            <script type="text/javascript">
+    //å¤æ­æä½ç³»ç»åæµè§å¨ç±»åï¼éè¦å¤æ­çé¡µé¢å ä¸detectOS()ï¼
+    function detectOS() {
+        var sUserAgent = navigator.userAgent;
+        var isWin = (navigator.platform == "Win32") || (navigator.platform == "Windows");
+        if (isWin) {
+            if(navigator.userAgent.indexOf("MSIE 6.0")>0
+                || navigator.userAgent.indexOf("MSIE 7.0")>0
+                //|| navigator.userAgent.indexOf("MSIE 8.0")>0
+				){ //IE6ã7ã8ã9
+                window.location.href = "https://zuinfo.zju.edu.cn/system/browser.zf";
+            }
+        }
+    }
+    detectOS();
+
+    var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fe1e64d90fd28a9fbda7cf412f7c5251";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+
+    
+</script>
+
+                        </head>
+
+                        <body class="zh">
+                            <input id="send_error" type="hidden" value=" loginView.sendsms.error  ">
+                            
+                                
+                                
+                                
+                                
+                                    <div class="login-page">
+                                        <div style="padding:10px 20px;text-align:right;font-size:14px">
+                                            <a href="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html&amp;locale=zh_CN">
+                                                中文 | </a>
+                                            <a href="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html&amp;locale=en">
+                                                English </a>
+                                        </div>
+                                        <div class="logo" style="top: 20%; right: 612.5px;">
+                                            <img src="./统一身份认证平台2_files/cas_logo.png" class="" alt="logo">
+                                        </div>
+                                        <div class="login-container" style="right: 653.5px; margin-top: -13.5px;">
+                                            <div class="col-xs-12 text-center login-passtitle">
+                                                <label>浙大通行证 </label>
+                                            </div>
+                                            
+                                                
+                                                    
+                                                        
+                                                            
+                                                                
+                                                                    
+                                                                        
+                                                                            
+                                                                                
+                                                                                    <div class="col-xs-12 login-form-wrap">
+																					
+                                                                                        <div class="login-form">
+                                                                                            <div class="login-header">
+                                                                                                <ul class="login-ul">
+                                                                                                    <li class="active">
+                                                                                                        <a>
+                                                                                                            <img class="hidden-xs" src="./统一身份认证平台2_files/qcode.png" onclick="showDingQr()" alt="Image about qcode">
+                                                                                                            <img class="blue-qcode hidden-lg hidden-md hidden-sm" src="./统一身份认证平台2_files/qcode-mobile.png" alt="qcode-mobile">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                    <li>
+                                                                                                        <a><img src="./统一身份认证平台2_files/qcode-pc.png" alt="qcode-pc"></a>
+                                                                                                    </li>
+                                                                                                    <input type="hidden" id="uuid" value="">
+                                                                                                    <input type="hidden" id="baseUrl" value="http://zjuam.zju.edu.cn:80/cas">
+                                                                                                </ul>
+                                                                                            </div>
+                                                                                            <div class="login-middle">
+                                                                                                <div class="tab-content">
+                                                                                                    <div class="tab-pane fade active in" id="qcode">
+                                                                                                        <form id="fm1" action="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html" method="post">
+                                                                                                            <div class="form-group">
+                                                                                                                <p class="error text-left" id="errormsg">
+                                                                                                                    <span id="msg">用户名或密码错误</span>
+                                                                                                                </p>
+                                                                                                                <div class="input-group">
+                                                                                                                    
+                                                                                                                    <div class="input-group-addon"><img src="./统一身份认证平台2_files/user.png" alt="user"></div>
+                                                                                                                    <input id="username" name="username" class="form-control user-input" title="职工号/学号/手机号码/邮箱/别名" tabindex="1" placeholder="职工号/学号/手机号码/邮箱/别名" type="text" value="3230102633" size="25" autocomplete="off">
+                                                                                                                    <a class="forget-pwd" target="_blank" href="https://zjuam.zju.edu.cn/zjuam-main/security/activateUser/index">
+                                                                                                                        点击激活用户
+                                                                                                                    </a>
+                                                                                                                    <input type="button" id="sendsms" class="btn btn-primary get-code-btn" title="获取动态口令" value="获取动态口令" style="display:none">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="form-group">
+                                                                                                                <div class="input-group">
+                                                                                                                    <div class="input-group-addon"><img src="./统一身份认证平台2_files/lock.png" alt="lock"></div>
+                                                                                                                    <input id="password" name="password" class="form-control pwd-input" title="输入密码" tabindex="2" onblur="CreateRatePasswdReq(this);" type="password" value="" size="25" autocomplete="off">
+                                                                                                                    <a class="forget-pwd" target="_blank" href="https://zjuam.zju.edu.cn/zjuam-main/security/retakepwdUser/index">
+                                                                                                                        忘记登录密码 ? </a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="code" id="kaptcha" style="display: none;">
+                                                                                                                <div class="col-xs-2 text-left p-r-0 code-text">
+                                                                                                                    <span>验证码 </span>
+                                                                                                                </div>
+
+                                                                                                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 p-0">
+                                                                                                                    <div class="col-xs-5">
+                                                                                                                        <input id="authcode" name="authcode" class="form-control" tabindex="2" type="text" value="" size="10" autocomplete="off">
+                                                                                                                    </div>
+                                                                                                                    <div class="col-xs-7 p-0 code-img"><img id="yzmPic" onclick="javascript:refreshCode();" class="" src="./统一身份认证平台2_files/kaptcha">
+                                                                                                                        <a href="javascript:refreshCode();">
+                                                                                                                            看不清 ? </a>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                            </div>
+                                                                                                            <div class="login-info row">
+                                                                                                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8 p-l-25 login-button"><button type="button" class="btn btn-block btn-primary login-btn" id="dl">登 录 </button></div>
+                                                                                                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 remember-me ">
+                                                                                                                    <input class="default-checkbox checkbox" type="checkbox" name="rememberMe" value="true" id="rember">
+                                                                                                                    <label for="rember">记住我 </label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <input type="hidden" name="execution" value="855d1be0-6e9a-4911-8ac4-e3702a590a11_ZXlKaGJHY2lPaUpJVXpVeE1pSjkuTTJkWGJFTk5VbEY2UVhZeFFWWnFkakp1TDAxM0sxTmFWVGx6TDJSWFQwZFdNMVY0VW1ka1lUZENSV3AwYVhaalF6Qk5jRFJEWWs1R1JGbGxWMlJLVVZOSlpXTnVObVZrY0RnNGVsUldVV052TVN0bGFscFBWR3BLTWs1cE5EQkJieTkwYjA1bFdFNUJUbVprUmpWa2VGUmxXVEJrZEdWb2RWSXpRamcwTVRONE9VdFNSRnBFVUhOdlpuZHdkSGMwVjNVeVUzaElMME5FTlVGMlpubE5kUzh4WTFGdFFXOVJPVGhYYWxGWlNFTndjRXBFU3k5clQwVk5ha2c0ZGxCUFFsSmpkQzlxWXpCaVlsRmphV1JuYmpKS2VWWmlVMnM0Y1dGb1JIb3ZWV2RJZFM5MWFYaEhhbmR5ZVVoMFVVeFpUM1YwWjNCM2JtVndiME5tWlUxeFFtTnhaM1pvZEdwVFJXTmhPVm8xVmxOeWFVVm5iMVF2Y0dORmMzaFVWMUZ0VFcwdmVXMW1kekUyTjBZeFYweElOREpVUVZaMWRIWXdkR3BZTDBGcVVFeFZWRUpxTVVaRGEycEdOaloyZG1WRGNHMDFkWFJVVXpCeVJGVjJOU3RRSzFad2QwaEVaRVJ2ZFZFM2VVc3ZSMlozT0RWVlNXRkdLemw2TlhST2FqSkhUR292YVVWNVpGcFpkVlZTUld3NGFrbDJhbGszVTB0MFUzbERPR0U1TjFoUE1XTndhRmxqY0VoUU1qZG5TME5yYW1kR1oyRm5jazVFVDBsUWMxVkNkVU5XYWpkdlpIZ3lPSFZ6ZFZkQ1ZFdFlkM0kyZEVSWGVraDVVa0V4WW1wNVJpOURLMkV6U0ZGRUwzSjBTRFpSWW1aSVNXTk9XVlZqTTA5eGNIY3JNVVpSVVZaNVNtdDFiVGxRTUhGdlNWZHZOR1V4YzJsTFYwaFlLM2hDWjFCbVFUZDBVSFpSU0d0TEswZGlTMGxzZWtGcWVuQlBNbFUwUmxKMFpqZG9LemwyU0VaVFpHeHZURFZhUzJWUWJVaDFhbEZxZERGdVRUVlFkSE5zT0RZMlFYUndaM2hpY2pjNGJ6RTFjelJ6ZHpCcWREQnpabVlyTm5WcFpsWktUeTgyVVdkRVVXcGlRVzlhWW1WdU9YRk9hbU5DTm1jdk5HeExhekI1TWt4YVZEazFkRUZwVG1jME0wNUtXRzlUVVZJd1lXTnpTM1YwVVRsWk5USTNXR0ZrVGlzMGMyaHhTWEZvTVV3d01rOXJiMnh4VWtFNE1IRm1SVWMwTWk5MlRHaDVXRWhsTkdOQ2JscFNSM1ZoYmtvMFZrSXJPR3R2ZG5wTVdrWlBSRzFqZUVKNmNrNHlPWGhrWVRoeFpVVlpibUUwYW01U2QwazJlREZxV0hsQk9UWTJabGt4VFdSU1lrMXFSbVZvY2toQloySkliM2hoU0RScmQzSlFiak5pVlRCdmJUTnZRVUpYYldWdE9XOTNVVXBxVUhGTmRubFVaVGgwYUc5bVpYRlFLMmhRYjNGSFZ6bG1PVEV5S3pSblZtWmFSRmxoZENzeVQwTmFkelJaVFZsSE9EWlRVR2M0U2xaa1JEbDVOVVZuT1ZKME56Vm5Ra2x4VlVGaVUydzRZbUpOT0ZaRFlrOVphazk0YlZwVVUybDRORXhXZW5GQlduVTVVbUkzUkhRM1dHUmhNMlpWVlRWWGNGbHlUR1pvUWtSallUYzFaekl6VXpGQlRDOVRNa2hCTHpWNlVuUTRZekJ0WVZobVRWQkRWMnhtTm1Sd2QxWlNOazFpYVV4TGRYSktPRk00V2s4d1duQnNNa1V5VkZaYWMwTm5TRUpGUkZWb1pGaDRUM1k1T0RNclMxTXlPR3BHTjFkMGFTOUNlVU16VTJJeWVucG9hMWN3VTFOMVlUQktVSGt2ZERWeFJWUjRWR28yYVVSU2JrMHZObGhCVlU1TlFXMDRTbVZFWXpadlJuSmtZME5ZTTFJeVFrVTBjbEpUV0U1cWJ6UmFhekkxT0RoSk9YSmtUakV5VTNNMWJrbFpNMll4WldKbWFXbERkbkJwZDFSdlMyRklXV3BQZFU5WWVXaEtjVzFUTDNsVU1FTkpSalY2WjJOV1RESTNaWFIzVGpSdGIyRmlaWGd5UVU1T2EzWk9SVUpoUm1ncmFUWk9lR3gzTUhsNFNGRkdWbEoxU0hCU2REUmtSR0pxUXpsbllsQjZkRzVQY21WM1JrbHZaVVpuTkZoUFV6RnJTRVJ4V2k5U09IaHZjWGhWU1M5b2VubFRVWEZFV1ZoMVVtOVpOamhGY3l0RGJtbENLMlp5VWpCWlpYUjNUeTlDYlRoTlZtRXlaRTV6UWxJd056ZGlaVVJUZFZWQlpGa3hOMk5RT0ZCU05UTnpWV2hHTjJsd2EwMUtOMU5VVm1SclFXSkJhVlJOY213M2JraHBXRWhNWTA0clYybHBTM2wzV1M5eEwwRXpZMnBRZFhVM1VVdEJLMVJ0ZG5CVGFqUjBjVkZHYzBVck1rTk9Oa0ZOZEhGUGMyWk5MMjFJYTFsR2RVdFBORVF2VnpOMGEwaFNVelprWmtkMFIxSjVVa0pRUVVaMGFuWTVRMmx4TDB4bk5rVnhkMGxGVkVWc1dqZGFUa2hIY1ZGRU1rODJXREpHUjNGS1ptZzVTamx5U1RoUlpsb3JLMFZMVm1Sd1NESTVUQzlZY210bk4wOTFVazh3TkRkSVpGZGlNblZRT0RWTFQydzFZa3N2YVhNeWRqbDZPR2hNYVRWR1MydFpTVU5FV2xwdlYwUnRTQ3N4U21Sb1JXNWxRVWRHZW1KTWExUjBlWFZLZDBGdFZWUmhja3RpVDFWeGNGTjFURFpGT1VwVlEyeGFLMDUyYkZSTVRUWktURFJqZWxGaU1WY3dkSEkyTDBVck5FUlJNV05oVTNrNU5IZFNhMGRxTkd0NWNXZGpha2RKY2tsMGMwWm5aRll6YkhWaVNUVjNRV2g2VEVseFJHVXdkRFJFYm1KUlFXZFBVSGwyVmtaNE9HeEZSVFJvWm5CR2NtTnpiV3d2WjJoc1NXdFRWbTlpWVVwdGJIZFBRVWw2UjJkWGJEQXljVWswZGtaWllXMU9RV0o2VEhJNFNqQjJlRXRLVjA5SGFrNUVWbTgwYjBoVWVYQlNTa0U1YW5OVFdVSnhObVZaWVU4MGNtWkxSbkk1WVVaWFJqVlFWSEYwU3paMlQyMW1lVFpCUWl0M1drbFpVbUZ1V205SFRpdG5TMmRrVWxaeGN6VTNVbWt6YW1wVVRrSnlVMDkxYmxwdlFrdHhTR2xpUm5VNFNEVnVTbXMwTkc0eFRGZDJOall4VjFGSWJEVlVRbXhwY1drNVFYVkJOVzlCTVZobGFXTkhPWHBtU1U5M056ZDNNbUl4Y2pKc2JVZE1jMDVMVEhWRWJWaDZWWFUzWlhCQ2VWZEJPV2RyWnpGa2J6UkdkRGRHZUdkTFZqZHFNbVZLTVc5M1JWaDZZM1pXV0hwVlRIZDJTVWQwVkZrd1ZFbENOa2Q2YjNoc1VrbDNlVmRXUTJwSlpWTlliVmhRV1VRd1dtTjRkMnhtVkZvM0wwcEZVRkZLV2pGdlUyUTRabU4xT0dGNmFHbHpiWE0yU0UxeFRXdFlRVWwwZURGV2VWUTVSV2hHV0c5aVRFOXpZbVI0U2s1NmFUTlNaVzFJVjFVclJXWnJiMloxU1RrMk5scGpkVGhRTWpFNVpEUnZLMVE0SzJ0WldsSkJOalZGTXk5U09XZE5OVXh5ZVhsU04zbEpNRk54YUhVeFUwRlRkek5pZVhsclZrRk1aSFV6WTJjNGVFOUJablp2WlhaUlV5dFhjVFp4YURoTlQydDBhbXB4TTBWNVQzQnRObnBFUkV0MlkwOW1WM1E1YW5GaFR6VkdWbGhuVkhWTU5WbEhkVzVCYTA0cmREZFpjM2hhY0dKYU9XdFhOalphVFdjMmRHRTFPVWgyZHpWRWRuWklZVXMzV0V0TmNYcHJUMmc0TmxnMFFUbFNRWEkyU1U0NVpUaEhjbkkyTlV0TFZVZGpWR1pRVFVoaVpsWjFTRmxHU1dwWlFpOVpSR3hWZUdReGIzSlZRbkJsU0VNMWJGQnNUVmR0VFhOSU1qbFdjV28yVWs5UWNuRnhPREJFY0Zaa2IwOUpPR293VG5jNVRYUnRkMFl2VmpCdU0zYzNTV05aYzFOcFpIWlRhMWg1UW5JemVrcE1jREZOSzNWNmFsTnZkbWhhVTFBMVdIaENiRU5HZERCVldFOVhPWGRIVEU4eE1USktVMlZOTTJKTE1rcEhhbUpITjNsMk9EYzNkM0JvWjJoaVJWVjBPVmROTkVZME1XbEJRelI1ZEc5V01ITnpVVlk0Y0c4MllUQnZNRVZWUVVjd2IzYzBXak5FZW5wRU1VUmFaazFHZUdoQmJIaHVlVTgyWVdwd2IwUkhNMmw1UTJOb05WQkpSMkl3UTNJeGRXeFJXVGh2UVROeVpubzFjbWNyZVN0UFMyVXpibFpsV25aWE4ycENUVk5QY2sxaVl6VlhkbU14TjBsSlVFZFVaV0UzTVZsa1RuUmtVVXRaVUVwT09YYzJURVVyZDA1clJrTlZVR2RMUzNGc04zVlhOMjlTUWxOMk0wSnZjalpKZEVkMGFXZEVWelo1Y0ZOTk4yVndaRVZ2YXpCdE1rVnBhWGMyV1dZNFdFUlVZWGh3Unk5NlJVbFdja2tyU1ZwTWJIbHNZM1ZqZUhZeGRucFZjMUpXVTNCM2JYcHBhMkUyVDIxQlpIQjZlSFE0YURoWVdYUjRNRzFrTUU1M1owbHJjSGhhU0VVclQwVmFSbXMyUVZJNE5HNTRSWGMyU1VwUWRHbHFaMmgzYUd4R1QzbHRXRXROUXl0U1MydFBWM3A1U1VFd2NuRm9aMmhXZG5sbldrc3ZZbnBvZDBSMVkzSkhaR2xvUzI1a1lqaG5ja3hIVnl0UE0wcG9MMkkzYVdOelJqWk5Wa3RHVmpaSGMxZFNibGgwTTJ4cE0yWTFXVkV4VlRGblJ6RTFia0V6YTFCd1RVWlhNMEZCVWpWcU16QktURUpRU1d4ek5USnBabWR6THpkbGRVOVVXbGhuUmtScU0yNUxZWFF2WW10a2MxUk5WUzloV1hwNVNVTjVkakYxVDB0Uk1UQmthVlYxVkZrMVFuWlRaVVpTT0VwRVlVbHNWa3d5ZFZsQ1VWSTFOM2xUVDNGUWN6VmpObTlYVlhOUlNXRjVVVTgxTjFCbWF6UmhSakJRVFhKdlRUY3hielJ6ZDBKT1FXRnRNR1ZNWW5WcWFHZHFjbkV6VUc1aGFtUlVTSGRhTDFKdGRISmtVM2h5YlZsMWVraDZTRGRFZFc1WU1GQkljblowTlhwSVYzTXdaM0I1VVRkb2FGWnhUWGRCT0ROcmNWQjFjeXQ1Tm1jMWVHbE9TakpxVDBGVk9VaFFWMHMyYkVFMlpHNDFNbk50TkhGdmQxRnpibTFaUTJRMFFXMHpNVkpRVHpJMGRuUkpWM2hCVlZFeFRFZGtjME51TUhkMk16TktkUzlHUWxwRUszRnlOVGgxUkhaRU0ySjRXbGhVYUU5V05tdHhkamxhYzFRM09URjZRME5OZDBsVU1WSmpiMlJGTmtzeFZFOXBkV1F4VW10SVkzUjRZa0YwY0dOTFQycHBhRFpCTlhSelRXVmphV0ZCVlZCRVNrSllOamQyWmpWdVRtSnVLMFptTld4V1ptd3JSblpRZVhKRVpGcG5NSFV2UjIxa1owSnFRbGR3UXpKUGFHTkRibmhVVEhKMk5GUTFhWG94V0RoME1IUnRNRWRYUmxCT2JVaEhTVlp2Y2xsWFZGVjBUR2QzU0c0NWVXc3lUMlprT0dWTlVsSjROVEZYYjBkb05GRkZPRlJvTTJwelZVZDJMMUZYYjBoRlRtNVRVVUpUWmtSVlkyeFdhbWxYTVcxa1ZUWkxhbWhoZEVwUGJYaEpTWGx3Y1VWdVNHaEZTV0pRVjNvM1YwWTBha05YTTBJNFFpOTRaVXgxVUhCdGVYbGtMMnBxVDNWeU5pOVZOVkYzVEZrNGVWaEZXbWxxUW10V0swaFpiREpPZG01amJEazVRa1JTTWtac01GVkhWa2RZUmxoQmVXdGhjbUpFTWpKRlUwWnVUQ3RVY1VwdlRTOTRhVVZYYm5WQ1NXUjFTMjkwUWs5Q01WUlJaMFVyUTA1dWEyZFNiR05aUm1KcU0yZFdkRlpqVUU1T2NFWkVSamxRUWpKSGFsVmtORkJ5UTNJM1FXazFVV1JVTmtOQlQwWXhLMUZPVUd3M2VWZzNTbVpZV2s1dFkxTjJTR28wVDFsRGF6UXZXV1YwUkhCWGFHcHVWRzlXT1ROQ2FGQm5QVDAuX29UdU1vcGNzdmZEcFluUWdrbmZSWGJRNmxWNDE2Y0pQTm5yMDV3N0tsVTJuUElRVmIxQkZVekgzN29Qdnhtc05xVlJxRzNYcXpPdEx3S1l0ckRkWnc=">
+                                                                                                            <input type="hidden" name="_eventId" value="submit">
+                                                                                                        </form>
+                                                                                                        <div class="text-center">
+																											
+                                                                                                            <p class="text-center notice">
+                                                                                                             
+                                                                                                            </p>
+
+                                                                                                            
+
+                                                                                                                <div class="login-img">
+                                                                                                                    <h3>
+                                                                                                                        国际校区师生登录
+                                                                                                                    </h3>
+                                                                                                                    <a href="https://login.microsoftonline.com/292620c5-ae10-4553-accf-68ec80325008/oauth2/v2.0/authorize?client_id=b85e9cdb-5584-4536-9108-5136aa1db133&amp;response_type=code&amp;redirect_uri=https%3a%2f%2fzjuam.zju.edu.cn%2fcas%2flogin%3fclient_name%3dAdfsClient&amp;scope=https%3A%2F%2Fgraph.microsoft.com%2FUser.read"><img src="./统一身份认证平台2_files/intl.png" alt="intl"></a>
+                                                                                                                </div>
+                                                                                                                <div class="login-way">
+                                                                                                                    <h3>
+                                                                                                                        第三方账号登录 </h3>
+																													<a href="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html#"><i class="dingding" onclick="showDingQr()"></i></a>
+                                                                                                                    <a href="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html#"><i class="fa fa-qq"></i></a>
+                                                                                                                    <a href="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html#"><i class="fa fa-weixin"></i></a>
+                                                                                                                </div>
+																												<p class="text-center notice">
+                                                                                                               统一身份认证咨询电话 0571-87951669
+                                                                                                            </p>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="tab-pane fade text-center" id="qcodepc">
+                                                                                                        <span>手机扫描，安全登录 </span>
+                                                                                                        <!--<a target="_blank" id="qrcode" href="javascript:void(0);">
+                                <div id="qrcode-img">
+
+                                </div>
+                            </a>-->
+	
+                                                                                                        <a target="_blank" id="qrcode" href="javascript:void(0);">
+                                                                                                            <div id="qrcode-img"></div>
+                                                                                                        </a>
+                                                                                                        <div id="qrcode-content" style="display: none;">
+                                                                                                            <div class="qrcode-bg"></div>
+                                                                                                            <p class="refresh-text">
+                                                                                                                <i class="fa fa-refresh"></i>
+                                                                                                                <a href="https://zjuam.zju.edu.cn/cas/login?service=http%3A%2F%2Fzdbk.zju.edu.cn%2Fjwglxt%2Fxtgl%2Flogin_ssologin.html#" id="qrcode_refresh">
+                                                                                                                    刷新 </a>
+                                                                                                            </p>
+                                                                                                        </div>
+
+                                                                                                        <span>只限于<span class="blue"><a href="http://m.zju.edu.cn/" target="_blank">我的浙大APP</a></span>扫码登录</span>
+
+                                                                                                    </div>
+																									
+																								</div>
+                                                                                            </div>
+                                                                                            <div class="login-footer"></div>
+                                                                                        </div>
+                                                                                    </div>
+                                        </div>
+										<div class="ding-QR" style="right: 653.5px; margin-top: -13.5px;">
+											<div>
+												<img onclick="returnPre()" class="qr-toPre" src="./统一身份认证平台2_files/qcode-pc.png" alt="Image about qcode">
+												<div class="ding-show ding-qrcode">
+													<div id="login_container"><iframe src="./统一身份认证平台2_files/qrcode.html" frameborder="0" scrolling="no" width="300px" height="350px"></iframe></div>
+												</div>
+											</div>
+										</div>
+                                    </div>
+                                    <script>
+                                        $(function() {
+                                            //�ж�IE�����
+                                            if (navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE", "")) < 9) {
+                                                $("body").append("<style>.default-checkbox + label:before{border:0px;}</style>");
+                                                //console.log("您的浏览器版本过低，请使用IE9及以上版本");
+                                                $(".login-page").css("height", $(window).height());
+                                                $(".login-container").css("filter", "progid:DXImageTransform.Microsoft.gradient(startColorstr=#70000000,endColorstr=#70000000)");
+                                                $(".blue-qcode").css("display", "none");
+                                                $(".default-checkbox").css({
+                                                    "margin-top": "11px",
+                                                    "margin-left": "35px"
+                                                });
+                                            }
+                                            var loginMargintop = $(window).height() - $('.login-container').height();
+                                            var loginMarginright = $(window).width() - $('.login-container').width();
+                                            var logoMarginright = $(window).width() - $('.logo').width();
+
+                                            $('.login-container').css({
+                                                'right': loginMarginright / 2,
+                                                'margin-top': loginMargintop / 2 + 10
+                                            });
+											$(".ding-QR").css({
+                                                'right': loginMarginright / 2,
+                                                'margin-top': loginMargintop / 2 + 10
+                                            });
+
+                                            if ($(window).width() > 1440) {
+
+                                                $('.logo').css({
+                                                    'top': '20%',
+                                                    'right': logoMarginright / 2
+                                                });
+
+                                            } else {
+
+                                                $('.logo').css({
+                                                    'top': '5%',
+                                                    'right': logoMarginright / 2
+                                                });
+                                            }
+                                        });
+                                        $(window).resize(function() {
+
+                                            var loginMargintop = $(window).height() - $('.login-container').height();
+                                            var loginMarginright = $(window).width() - $('.login-container').width();
+                                            var logoMarginright = $(window).width() - $('.logo').width();
+
+                                            $('.login-container').css({
+                                                'right': loginMarginright / 2,
+                                                'margin-top': loginMargintop / 2 + 10
+                                            });
+
+                                            if ($(window).width() > 1440) {
+
+                                                $('.logo').css({
+                                                    'top': '20%',
+                                                    'right': logoMarginright / 2
+                                                });
+
+                                            } else {
+
+                                                $('.logo').css({
+                                                    'top': '5%',
+                                                    'right': logoMarginright / 2
+                                                });
+                                            }
+
+                                        });
+										
+										!function (window, document) {
+    function d(a) {
+        var e, c = document.createElement("iframe"),
+            d = "https://login.dingtalk.com/login/qrcode.htm?goto=" + a.goto ;
+        d += a.style ? "&style=" + encodeURIComponent(a.style) : "",
+            d += a.href ? "&href=" + a.href : "",
+            c.src = d,
+            c.frameBorder = "0",
+            c.allowTransparency = "true",
+            c.scrolling = "no",
+            c.width =  a.width ? a.width + 'px' : "365px",
+            c.height = a.height ? a.height + 'px' : "400px",
+            e = document.getElementById(a.id),
+            e.innerHTML = "",
+            e.appendChild(c)
+    }
+    window.DDLogin = d
+}(window, document);
+	var obj = DDLogin({
+     id:"login_container",//这里需要你在自己的页面定义一个HTML标签并设置id，例如<div id="login_container"></div>或<span id="login_container"></span>
+     goto: "https%3a%2f%2foapi.dingtalk.com%2fconnect%2foauth2%2fsns_authorize%3fappid%3ddingoayiy2etqcpmyc0lpk%26response_type%3dcode%26scope%3dsnsapi_login%26state%3dSTATE%26redirect_uri%3dhttps%253A%252F%252Fzjuam.zju.edu.cn%252Fcas%252Flogin%253Fclient_name%253DDingDingClient", //请参考注释里的方式
+     style: "border:none;background-color:#FFFFFF;",
+     width : "300",
+     height: "350"
+ });
+ 
+ function showDingQr() {
+	 $('#username').after($('#username').prop("outerHTML")).remove();
+$('#password').after($('#password').prop("outerHTML")).remove();
+	 $(".ding-QR").show();
+	 $(".login-container").hide();
+ }
+ 
+ function returnPre() {
+	 $('#username').after($('#username').prop("outerHTML")).remove();
+$('#password').after($('#password').prop("outerHTML")).remove();
+	 $(".ding-QR").hide();
+	 $(".login-container").show();
+ }
+ 
+ var handleMessage = function (event) {
+  var origin = event.origin;
+  console.log("origin", event.origin);
+  if( origin == "https://login.dingtalk.com" ) { //判断是否来自ddLogin扫码事件。
+    var loginTmpCode = event.data; 
+    //获取到loginTmpCode后就可以在这里构造跳转链接进行跳转了
+    
+    window.location.href="https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=dingoayiy2etqcpmyc0lpk&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=REDIRECT_URI&loginTmpCode="+loginTmpCode;
+  }
+};
+if (typeof window.addEventListener != 'undefined') {
+    window.addEventListener('message', handleMessage, false);
+} else if (typeof window.attachEvent != 'undefined') {
+    window.attachEvent('onmessage', handleMessage);
+}
+                                    </script>
+                                    <!-- Matomo -->
+                                    <script type="text/javascript">
+                                        var _paq = _paq || [];
+                                        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+                                        _paq.push(['trackPageView']);
+                                        _paq.push(['enableLinkTracking']);
+                                        (function() {
+                                            var u = "http://piwik.zju.edu.cn/";
+                                            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                                            _paq.push(['setSiteId', '6']);
+                                            var d = document,
+                                                g = d.createElement('script'),
+                                                s = d.getElementsByTagName('script')[0];
+                                            g.type = 'text/javascript';
+                                            g.async = true;
+                                            g.defer = true;
+                                            g.src = u + 'piwik.js';
+                                            s.parentNode.insertBefore(g, s);
+                                        })();
+                                    </script>
+                                    <!-- End Matomo Code -->
+
+                        
+
+                        </body></html>

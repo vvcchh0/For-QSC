@@ -1,0 +1,3 @@
+https://blog.csdn.net/weixin_43997331/article/details/125736246
+
+go env -w GOPROXY=https://goproxy.cn,direct
